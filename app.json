@@ -1,0 +1,99 @@
+{
+  "expo": {
+    "name": "Kalory",
+    "slug": "kalory",
+    "version": "1.2.4",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "com.supabase",
+    "ios": {
+      "usesAppleSignIn": true,
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow Kalory to access camera for Barcode Scans and Ai Scanner. Only the barcode number from the scan will be used to search or add food. No other data will be collected or used.",
+        "NSMicrophoneUsageDescription": "Allow Kalory to access the microphone for potential video recording features.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.brodvey.kalory",
+      "buildNumber": "63"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#141414"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.brodvey.kaloryAndroid",
+      "versionCode": 22
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      [
+        "expo-router"
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Kalory to access camera for Barcode Scans and Ai scanner. Only the barcode number from the scan will be used to search or add food. No other data will be collected or used.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent"
+        }
+      ],
+      [
+        "expo-asset",
+        {
+          "assets": [
+            "assets"
+          ]
+        }
+      ],
+      [
+        "expo-apple-authentication"
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#141414",
+          "image": "./assets/logo.png",
+          "dark": {
+            "image": "./assets/logo.png",
+            "backgroundColor": "#141414"
+          },
+          "resizeMode": "contain",
+          "imageWidth": 100
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "assets/fonts/SpaceMono-Regular.ttf"
+          ]
+        }
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "aad711a4-6856-45f9-860f-1d2435924aaa"
+      }
+    }
+  }
+}
