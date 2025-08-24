@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src="https://replace.later" height="100" alt="Kalory logo">
+    <img src="https://github.com/semkolol/kalory-app/blob/master/assets/icon.png" height="100" alt="Kalory logo">
   </picture>
 </p>
 
