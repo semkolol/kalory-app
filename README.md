@@ -15,39 +15,64 @@
   Open Source and Private Alternative to YAZIO, MyFitnessPal, CalAI.
 </p>
 
-## Getting Started
-### Prerequisites
+# Getting Started
 
-Node.js
-https://nodejs.org/en/download
+Welcome to setting up the app! Follow these steps to get it running locally. The app operates fully offline, handling user data and in-app purchase logic locally. *(Note: Be aware of potential challenges with local in-app purchase handling.)*
 
-Having a compatible Simulator or Physical Device, at least iOS 15
+## Prerequisites
 
-The app is fully local, user data, in-app purchase logic etc. even the AI API calls and your API-Keys so no server stuff needed.
-(I'm aware of the "issues" when handling in-app purchases locally)
+Before you begin, ensure you have the following:
 
-## Config
-If you want the in-app purchases to work, you will need an revenue-cat account and a apple developer account and replace the API-Keys in @/utils/purchases.ts
+- **Node.js**: Download and install from [nodejs.org](https://nodejs.org/en/download).
+- **Compatible Device**: A simulator or physical device running at least **iOS 15** or equivalent Android version.
+- **Accounts for In-App Purchases** (optional):
+  - [RevenueCat](https://www.revenuecat.com/) account.
+  - [Apple Developer](https://developer.apple.com/) account.
+- **API Key for AI Scan Feature** (optional):
+  - [OpenAI](https://platform.openai.com/) or [Google Gemini](https://ai.google.dev/) API key.
 
-You'll also need an OpenAI or Google Gemini API-Key to use the AI Scan feature.
+## Configuration
 
-## Run Locally
-Go into the root directory with your terminal
+To enable specific features, configure the following:
 
-Install dependencies
-``
-  npm install
-``
+1. **In-App Purchases**:
+   - Sign up for a RevenueCat account and an Apple Developer account.
+   - Replace the API keys in the following file:
+     ```bash
+     @/utils/purchases.ts
+     ```
 
-Run locally
-``
-  npx expo run:ios -d
+2. **AI Scan Feature**:
+   - Obtain an API key from OpenAI or Google Gemini.
+   - Update the relevant configuration file with your API key (check the project documentation for the exact file).
 
-  or
+## Running Locally
 
-  npx expo run:android -d
-``
+Follow these steps to run the app on your local machine:
 
--d to choose device
+1. **Navigate to the Project Directory**:
+   Open your terminal and go to the root directory of the project:
+   ```bash
+   cd /path/to/your/project
+   ```
 
-Note: that the app was developed iOS-first in mind
+2. **Install Dependencies**:
+   Install all required dependencies using npm:
+   ```bash
+   npm install
+   ```
+
+3. **Run the App**:
+   Use one of the following commands to run the app on your chosen platform:
+   - For iOS:
+     ```bash
+     npx expo run:ios -d
+     ```
+   - For Android:
+     ```bash
+     npx expo run:android -d
+     ```
+   *Note*: The `-d` flag allows you to select a specific device or simulator.
+
+4. **Development Note**:
+   The app was developed with an **iOS-first** approach, so some features may perform better on iOS devices or simulators.
